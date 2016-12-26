@@ -17,6 +17,17 @@ defmodule Vegas do
     end
   end
 
+  @doc """
+    Determines whether a deck contains a given card
+
+  ## Examples
+
+      iex> deck = Vegas.create_deck
+      iex> Vegas.contains?(deck, "Ace of Spades")
+      true
+
+  """
+
   def shuffle(deck) do
     Enum.shuffle(deck)
   end
@@ -32,8 +43,8 @@ defmodule Vegas do
 
   ## Examples
 
-      iex> deck = Cards.create_deck
-      iex> {hand, deck} = Cards.deal(deck, 1)
+      iex> deck = Vegas.create_deck
+      iex> {hand, deck} = Vegas.deal(deck, 1)
       iex> hand
       ["Ace of Spades"]
   """
